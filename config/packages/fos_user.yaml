@@ -1,0 +1,18 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: App\Entity\UserEntity
+    from_email:
+        address: mojadzialka@mdzialka.pl
+        sender_name: Administracja strony 'Moja Działka'
+    registration:
+        confirmation:
+            enabled: true
+            from_email:
+                address:        rejestracja@mdzialka.pl
+                sender_name:    Administracja strony 'Moja Działka'
+    resetting:
+        email:
+            from_email:
+                address:        reset@mdzialka.pl
+                sender_name:    Administracja strony 'Moja Działka'

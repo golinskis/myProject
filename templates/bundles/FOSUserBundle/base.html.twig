@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <style>
+    li a {
+      color: #3d6300 !important;
+    }
+    </style>
+    <title>
+      {% block title %}
+        Moja Działka
+      {% endblock %}
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #85d800;">
+      <div class="navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/posts">Zobacz posty<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/addpost">Dodaj Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/profile">Twój profil</a>
+          </li>
+        </ul>
+        <a class="btn btn-outline-success m-1" href="http://127.0.0.1:8000/login" role:"button" >Zaloguj</a>
+        <a class="btn btn-outline-success m-1" href="http://127.0.0.1:8000/logout" role:"button">Wyloguj</a>
+      </div>
+    </nav>
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <p>{% block body %}Site content{% endblock %}</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      <p>&copy; Moja Działka Inc. 2018</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
